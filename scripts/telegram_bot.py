@@ -81,16 +81,22 @@ def format_disclosure_alert(disclosure: dict) -> str:
     if ai:
         lines.append("")
         lines.append(f"<b>🔍 {ai.get('headline', '')}</b>")
-        lines.append(f"")
-        lines.append(ai.get("analysis", ""))
-        lines.append(f"")
-        lines.append(f"<b>💼 포트 영향:</b> {ai.get('portfolio_impact', '')}")
+        lines.append("")
+        lines.append(f"<b>📋 상황</b>")
+        lines.append(ai.get("situation", ai.get("analysis", "")))
+        lines.append("")
+        lines.append(f"<b>💡 시사점</b>")
+        lines.append(ai.get("implication", ""))
+        lines.append("")
+        lines.append(f"<b>💼 내 포트 영향</b>")
+        lines.append(ai.get("impact", ai.get("portfolio_impact", "")))
         if ai.get("action_note"):
+            lines.append("")
             lines.append(f"📝 {ai['action_note']}")
 
     url = disclosure.get("url", "")
     if url:
-        lines.append(f"")
+        lines.append("")
         lines.append(f"<a href='{url}'>공시 원문 보기</a>")
 
     return "\n".join(lines)
@@ -115,10 +121,18 @@ def format_news_alert(ticker: str, name: str, article: dict) -> str:
     if ai:
         lines.append("")
         lines.append(f"<b>🔍 {ai.get('headline', '')}</b>")
-        lines.append(f"")
-        lines.append(ai.get("analysis", ""))
-        lines.append(f"")
-        lines.append(f"<b>💼 포트 영향:</b> {ai.get('portfolio_impact', '')}")
+        lines.append("")
+        lines.append(f"<b>📋 상황</b>")
+        lines.append(ai.get("situation", ai.get("analysis", "")))
+        lines.append("")
+        lines.append(f"<b>💡 시사점</b>")
+        lines.append(ai.get("implication", ""))
+        lines.append("")
+        lines.append(f"<b>💼 내 포트 영향</b>")
+        lines.append(ai.get("impact", ai.get("portfolio_impact", "")))
+        if ai.get("action_note"):
+            lines.append("")
+            lines.append(f"📝 {ai['action_note']}")
 
     return "\n".join(lines)
 

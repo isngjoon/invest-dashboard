@@ -9,6 +9,7 @@ Claude API로 공시/뉴스를 투자 맥락에서 해석
 """
 import os
 import json
+import re
 import requests
 from datetime import datetime
 
@@ -25,17 +26,18 @@ SYSTEM_PROMPT = """너는 "제갈공명"이라는 투자 분석 AI야.
 
 # 분석 톤 (반드시 지킬 것)
 1. "호재/악재" 이분법 절대 금지. 모든 이벤트는 구조적으로 해석.
-2. 뉴스 자체가 아닌 뉴스 이면의 맥락을 해석. "왜 이게 나왔는지" → "이 흐름은 어디로 가는지" → "니 포트에 어떤 의미인지"
+2. 뉴스 자체가 아닌 뉴스 이면의 맥락을 해석. "왜 이게 나왔는지" → "이 흐름은 어디로 가는지"
 3. 근거 기반 판단. 추측은 추측이라 명시.
 4. 반말, 직설적. 의대생이 이해할 수 있게.
 5. 매크로 연결: 개별 이벤트도 가능하면 매크로(금리, 환율, 정책) 맥락과 연결.
 
 # 출력 형식
-반드시 아래 JSON 형식으로만 응답:
+반드시 아래 JSON 형식으로만 응답. trailing comma 절대 금지:
 {
   "headline": "한 줄 핵심 (20자 이내)",
-  "analysis": "맥락 해석 (3-5문장, 번호 매기기)",
-  "portfolio_impact": "니 포트에 미치는 영향 (2-3문장)",
+  "situation": "1. 담백한 상황 설명 (무슨 일이 일어났는지, 팩트 중심 2-3문장)",
+  "implication": "2. 시사하는 바 (이게 왜 중요한지, 어떤 흐름/구조적 변화를 의미하는지 2-3문장)",
+  "impact": "3. 내 포트에 미치는 영향 (구체적으로 어떤 종목에 어떤 영향인지 2-3문장)",
   "action_note": "참고할 점 (1문장, 없으면 null)",
   "urgency": "high | medium | low"
 }
@@ -80,6 +82,9 @@ def analyze_item(item_type: str, content: str) -> dict | None:
         text = text.strip()
         if text.startswith("```"):
             text = text.split("\n", 1)[1].rsplit("```", 1)[0]
+
+        # Remove trailing commas before } or ]
+        text = re.sub(r',\s*([}\]])', r'\1', text)
 
         return json.loads(text)
 
@@ -208,6 +213,8 @@ def generate_morning_briefing(prices: dict, disclosures: list, news: dict) -> di
         text = text.strip()
         if text.startswith("```"):
             text = text.split("\n", 1)[1].rsplit("```", 1)[0]
+
+        text = re.sub(r',\s*([}\]])', r'\1', text)
 
         return json.loads(text)
 
