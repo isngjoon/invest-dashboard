@@ -1,0 +1,383 @@
+{
+  "prices": {
+    "kr": [
+      {
+        "ticker": "082920",
+        "symbol": "082920.KQ",
+        "price": 40650.0,
+        "prev_close": 0,
+        "change_pct": 0,
+        "currency": "KRW",
+        "updated_at": "2026-04-05T03:43:11.696456",
+        "shares": 572,
+        "avg_price": 34950,
+        "current_value": 23251800.0,
+        "cost_basis": 19991400,
+        "pnl": 3260400.0,
+        "pnl_pct": 16.31
+      },
+      {
+        "ticker": "900290",
+        "symbol": "900290.KQ",
+        "price": 5190.0,
+        "prev_close": 0,
+        "change_pct": 0,
+        "currency": "KRW",
+        "updated_at": "2026-04-05T03:43:11.861068",
+        "shares": 670,
+        "avg_price": 6468,
+        "current_value": 3477300.0,
+        "cost_basis": 4333560,
+        "pnl": -856260.0,
+        "pnl_pct": -19.76
+      }
+    ],
+    "us": [
+      {
+        "ticker": "PLTR",
+        "symbol": "PLTR",
+        "price": 148.46,
+        "prev_close": 0,
+        "change_pct": 0,
+        "currency": "USD",
+        "updated_at": "2026-04-05T03:43:12.087890",
+        "shares": 42.766171,
+        "avg_price_usd": 87.12,
+        "current_value_usd": 6349.07,
+        "current_value_krw": 9590524,
+        "cost_basis_usd": 3725.79,
+        "pnl_usd": 2623.28,
+        "pnl_pct": 70.41
+      },
+      {
+        "ticker": "HIMS",
+        "symbol": "HIMS",
+        "price": 19.14,
+        "prev_close": 0,
+        "change_pct": 0,
+        "currency": "USD",
+        "updated_at": "2026-04-05T03:43:12.325265",
+        "shares": 42,
+        "avg_price_usd": 46.61,
+        "current_value_usd": 803.88,
+        "current_value_krw": 1214293,
+        "cost_basis_usd": 1957.62,
+        "pnl_usd": -1153.74,
+        "pnl_pct": -58.94
+      }
+    ],
+    "crypto": [
+      {
+        "ticker": "DOGE",
+        "price_krw": 138.08,
+        "change_24h_pct": 0.16,
+        "updated_at": "2026-04-05T03:43:12.578419",
+        "amount": 6899.18619436,
+        "avg_price_krw": 543.6,
+        "current_value_krw": 952640,
+        "cost_basis_krw": 3750398,
+        "pnl_krw": -2797758,
+        "pnl_pct": -74.6
+      },
+      {
+        "ticker": "XLM",
+        "price_krw": 243.89,
+        "change_24h_pct": -0.26,
+        "updated_at": "2026-04-05T03:43:12.578435",
+        "amount": 2581.4518787,
+        "avg_price_krw": 606.8,
+        "current_value_krw": 629590,
+        "cost_basis_krw": 1566425,
+        "pnl_krw": -936835,
+        "pnl_pct": -59.81
+      },
+      {
+        "ticker": "STX",
+        "price_krw": 321.6,
+        "change_24h_pct": 0.03,
+        "updated_at": "2026-04-05T03:43:12.578439",
+        "amount": 1015.52921644,
+        "avg_price_krw": 3292.7,
+        "current_value_krw": 326594,
+        "cost_basis_krw": 3343833,
+        "pnl_krw": -3017239,
+        "pnl_pct": -90.23
+      },
+      {
+        "ticker": "ETC",
+        "price_krw": 12861.7,
+        "change_24h_pct": 4.52,
+        "updated_at": "2026-04-05T03:43:12.578442",
+        "amount": 21.38210586,
+        "avg_price_krw": 52140,
+        "current_value_krw": 275010,
+        "cost_basis_krw": 1114863,
+        "pnl_krw": -839853,
+        "pnl_pct": -75.33
+      },
+      {
+        "ticker": "CTC",
+        "price_krw": 212.83,
+        "change_24h_pct": 0.08,
+        "updated_at": "2026-04-05T03:43:12.578444",
+        "amount": 926.43591074,
+        "avg_price_krw": 1927,
+        "current_value_krw": 197173,
+        "cost_basis_krw": 1785242,
+        "pnl_krw": -1588069,
+        "pnl_pct": -88.96
+      },
+      {
+        "ticker": "PYTH",
+        "price_krw": 61.2,
+        "change_24h_pct": -2.46,
+        "updated_at": "2026-04-05T03:43:12.578447",
+        "amount": 371.04639175,
+        "avg_price_krw": 1358,
+        "current_value_krw": 22708,
+        "cost_basis_krw": 503881,
+        "pnl_krw": -481173,
+        "pnl_pct": -95.49
+      }
+    ],
+    "macro": {
+      "us10y": {
+        "value": 4.31,
+        "change_pct": 0
+      },
+      "vix": {
+        "value": 23.87,
+        "change_pct": 0
+      },
+      "sp500": {
+        "value": 6582.69,
+        "change_pct": 0
+      },
+      "kospi": {
+        "value": 5377.3,
+        "change_pct": 0
+      },
+      "kosdaq": {
+        "value": 1063.75,
+        "change_pct": 0
+      },
+      "usdkrw": {
+        "value": 1510.54,
+        "change_pct": 0
+      }
+    },
+    "usdkrw": 1510.54,
+    "updated_at": "2026-04-05T03:43:13.621439"
+  },
+  "disclosures": [],
+  "news": {
+    "082920": {
+      "name": "비츠로셀",
+      "articles": [
+        {
+          "title": "'비츠로셀' 52주 신고가 경신, 성장의 기운이 모이는 일차전지 대표주 - 삼성증권, BUY(신규) - 한국경제",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9xWDhsTkN0UkdDemg5VTkyRmpMX1AtT1c1RFg3Y1dZbEhtUmVGLW5jcmpYbXJZSWI0NDNoNVV5a3RFanBkdFhWNjl3MklWQWFvV29ZNtIBVEFVX3lxTE9xWDhsTkN0UkdDemg5VTkyRmpMX1AtT1c1RFg3Y1dZbEhtUmVGLW5jcmpYbXJZSWI0NDNoNVV5a3RFanBkdFhWNjl3MklWQWFvV29ZNg?oc=5",
+          "date": "Fri, 03 Apr 2026 00:49:15 GMT",
+          "source": "한국경제"
+        },
+        {
+          "title": "비츠로셀 주가 3월 방산주 주춤해도 나홀로 급등, 군용전지 수요 증가에 '무상증자 권리락' 메꿨다 - businesspost.co.kr",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1PN0xzV1pIUkxiZEw2UEM4MWlvbG5RcDB4ekMxZFpOaVFVakNXS1lXZlA3QmZ0dXp1NEJHU1JVSEJnUFVfUGdldS1rdnB5ejE5dTY1cmUzLVFXc2VEUlEtNUE5ZGxJYjR4THVTQ1VaMU54MXM?oc=5",
+          "date": "Thu, 02 Apr 2026 07:44:16 GMT",
+          "source": "businesspost.co.kr"
+        },
+        {
+          "title": "신한투자 \"비츠로셀, 방산·에너지 실적 상향 가능…목표가↑\" - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE90V05LMXVDMUUyS2hHNDhKYUZfd3ZLMlZFOGI2d0dQM1FXeTljRndraFZjQnVsTmZpS016enFPaGVoTnBHcXAzSjNHcmJORHd6Yk9mVnNmRU5ReHfSAWBBVV95cUxQb05xX2dET0MwVnk0UWVpUTNQb2RRRnlBSC1GendfcjZ2ZWVXUGtiTnJWZFVWRF84QVk5TW9JcmJKNlVpSU12WDhJcUVKRU0ycTJnakpCTFhjeEI3Y3JSZ2g?oc=5",
+          "date": "Tue, 10 Mar 2026 07:00:00 GMT",
+          "source": "연합뉴스"
+        }
+      ]
+    },
+    "900290": {
+      "name": "그레이트리치과기유한공사",
+      "articles": [
+        {
+          "title": "GRT, 유상증자 통해 294억6999만8649원 조달 결정 - 디지털투데이",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5nOWxCZlVIUElfX0xlY25ydFdUT01TbFoyZVkxUHR3MzVPa3d1NTJkeHhaejl4ZWlQamlBSElFdWwtQzJwTFJ0OElxUkhJTW80Wk9sTTItSlJSVXZldHJQRm5PYmpYS0tfeEc3NTI5ZXZuams?oc=5",
+          "date": "Mon, 19 Jan 2026 08:00:00 GMT",
+          "source": "디지털투데이"
+        },
+        {
+          "title": "\"3년 뒤 연 매출 2조원 육박\"…中 GRT 3공장 가보니 [현장+] - 한국경제",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1fNWV3VmpNUEVLdjdTVjd5LVZKeUYwNkhJeTlHUGtFTWx1T3dqTXdGR01JY0ZxUHhfNUlwZDNxaS1GZ3JzVEc0Mm1uRHB4b2kwZnNjbDkxR0ZPUdIBVEFVX3lxTE4xc1QzcU01clB1OEFEcWlIOHBhMVNZZzBNS3MwbVhVdXBlaFAzQXViWFVhc3ZPdE5wWnVsS25GM0NGYWRmRER1dW9rZkMxVDJZTF9JSw?oc=5",
+          "date": "Sat, 16 Sep 2023 07:00:00 GMT",
+          "source": "한국경제"
+        },
+        {
+          "title": "나스닥행 철회…롤러코스터 타는 GRT - 서울경제",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBfUzhFcWk0V0sxSWYxaFZSczhMTXAxX1dZZ2h6WThPQkZvX1prR213bGVyZWlxemJCOVhyaXRlWEJPNDRTcnZ1ejVzTS1xNURrbEHSAVNBVV95cUxPbmdpMUk4TWhnMXBheDdqQWNtRHhEd0hLV0NvckJvWUdsSWJyQml6b25kdnFiTU83Y0JQNXVDcDdsczJXTGhnZmVNbGlQa202WTlHVQ?oc=5",
+          "date": "Thu, 27 Mar 2025 07:00:00 GMT",
+          "source": "서울경제"
+        }
+      ]
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "articles": [
+        {
+          "title": "Palantir Fell 15% This Week. Here’s Why Investors Are Reassessing the Stock in 2026 - TIKR.com",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZU5LRXF0Uy1EWlBSLXJxajBqUEtYYTYxdEF1Skg3X2w4RDRUY2d5SXFreUpVSXluVnhqTlcwNUN6cVVfLW1mcW9tQ21lUE5jbGdWc1BlcU9BUWNHbW9Hd1FDLTIteUNlN2dnZ0dCZzUzOWdLUWlWZkFGNlhxV1pWTVF2Z1E1M05YeWt5Rk9STkJKdTUxX0xMWk5KME8yOEFxbFVzOGRiVi1yaUZITWc?oc=5",
+          "date": "Tue, 31 Mar 2026 15:05:42 GMT",
+          "source": "TIKR.com"
+        },
+        {
+          "title": "Palantir Technologies Inc (PLTR) 주식 움직였습니다 상승 3.40%에 3월31일: 투자자가 알아야 할 정보 - tradingkey.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSXl6YkIyT0pTb3ZpdlVvOG5CNTlTRUF1c21kSnlOQ05KUXd5dVNuSjM5SDdaeFhKSlAzSHFmQ0d6cGxoaWFXelhCUWlwNlVSSDBEQmU3OVlUTDRNS3NEXzA3ZnUzalBBNHpIbDJXbXFCQzJST1BiaVFBN3I2aHB3R0ZqOEFSUVRpR2YzekJoNA?oc=5",
+          "date": "Tue, 31 Mar 2026 07:17:00 GMT",
+          "source": "tradingkey.com"
+        },
+        {
+          "title": "1년 동안 67% 급등한 팔란티어 테크놀로지스(PLTR)를 고려하기에는 너무 늦은 걸까요? - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVGRpX2FwMnRzSE5CRHZTYXFsUGdVRm5LU3hNVno2bUdrY0dTOEV5VERLODZrakNrdXlGQ2tOUDB3VDc4aXFtX2cwN3BhbUJ2SFptOE5HelpRV1ZUMjFGWmM0VWcxT1JsTUV3OHBrb2RhaVZXSE5nZVZOcDZyUmtpYjNWWEh5dDUydlFnSU1HTUc4RGkxdml4NkdOOTlTSVItUS1ycktn0gGmAUFVX3lxTE5UZGlfYXAydHNITkJEdlNhcWxQZ1VGbktTeE1WejZtR2tjR1M4RXlUREs4NmtqQ2t1eUZDa05QMHdUNzhpcW1fZzA3cGFtQnZIWm04Tkd6WlFXVlQyMUZaYzRVZzFPUmxNRXc4cGtvZGFpVldITmdlVk5wNnJSa2liM1ZYSHl0NTJ2UWdJTUdNRzhEaTF2aXg2R045OVNJUi1RLXJyS2c?oc=5",
+          "date": "Thu, 02 Apr 2026 17:40:34 GMT",
+          "source": "simplywall.st"
+        }
+      ]
+    },
+    "HIMS": {
+      "name": "Hims & Hers",
+      "articles": [
+        {
+          "title": "Hims &amp; Hers Stock Is Down 63% Over the Past 6 Months. Here’s Why the Valuation Still Looks Compelling - TIKR.com",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbzNzMFNZVWlzR0ZvV3ZUdGtxZEY1T1JIbmZ0RUZYaHFYMEZaUTJKVDlfYjJ1ME5yX2x5NlJOcTQyMThJcUo0T21HSzNYU0gtaFFRMlZaWENQZGE0a2QzOVlJdFhKV3BQVEthX3lkRGZtOERzMDFkdmkwLW9lR0RoY1ROY2w5LVU4bXNTaUYtSjVqT3JCTkZ3MVdCMjgtc0lKZ1ZpellGU2RyYU91MHdDXzFiU2JaZ1BPMDdENmNMdFAtM045?oc=5",
+          "date": "Wed, 01 Apr 2026 14:15:04 GMT",
+          "source": "TIKR.com"
+        },
+        {
+          "title": "제퍼리스, Hims &amp; Hers에 ’보유’ 등급 유지…가이던스 우려 - Investing.com 한국어",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBxU3lJSVFSSmhZVkpHcXVPS0xPUGQ0NWdpQkRSZEZxOGljbWxmVkFMMEpYcnFzRVh3TEFyZGR5SmxfOHNvNndrNkN1dDNfd09JTUNoWmduRE9vVWNta1BkTHlESlYyaUFkY3pIUGxuaFAyTDJu?oc=5",
+          "date": "Wed, 25 Feb 2026 08:00:00 GMT",
+          "source": "Investing.com 한국어"
+        },
+        {
+          "title": "힘스 앤 허스, 49달러 체중 감량 알약 중단 후 주가 급락 - Investing.com 한국어",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1TdEcxa1FHemM0Mmt0cTFBcG84OVVTTHl3RlFYRXNHLUNiWDhveEFudXVacFRfX2ktbzQwMWFsdV85RFBrbG13Wkx6a0lFTEN3T1lOWUNZYzcwN1BLMi1iMUNVR3FBVmRibjZZa2FGcUNjYl92UnhB?oc=5",
+          "date": "Mon, 09 Feb 2026 08:00:00 GMT",
+          "source": "Investing.com 한국어"
+        }
+      ]
+    },
+    "macro": {
+      "name": "매크로",
+      "articles": [
+        {
+          "title": "IMF “미 연준, 향후 1년간 금리 낮출 여지 거의 없어” - v.daum.net",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAxU1UwbUM3dHBXUEpJQi1GcEZkQ082ZExXWU82ODluUHZHQWVsamF2dHJiTXZQOXRkdEVWMDRwWWR6Z0x5WGpGQ3BSMFhUZzg?oc=5",
+          "date": "Fri, 03 Apr 2026 00:41:00 GMT",
+          "source": "v.daum.net"
+        },
+        {
+          "title": "미 연준, 금리 또 동결…“이란 전쟁에 경제 불확실성 커져” - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE16Z2dCNHJMSlR3bFpZNWVMcWtWY2pMNVBWeGxnY0ZSRVg0Tm11RThMRTNKekFfeGZTRU0yQW9BeXFVLVpyVWphQ0JkeXVTalJlSUhHb0tCeEkzb0hSS3NEUGhvcnA1MzNrbEQxd2ZYcw?oc=5",
+          "date": "Thu, 19 Mar 2026 07:00:00 GMT",
+          "source": "한겨레"
+        },
+        {
+          "title": "노무라 \"미국 高물가에도 금리 인상보다 인하 가능성 높아\" 왜? - 더구루",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1jNnVFTGFRWThSZ2JXSGl3Wlp5dkZQNnZtZUJ0V1RDQl9oeWJjT0RvWWpFaHJJOHgwRlF0YTlqNW1JanpJMFk2aXpROGd1YjhUS0I2MlJDX2JqeHBT?oc=5",
+          "date": "Wed, 01 Apr 2026 04:30:00 GMT",
+          "source": "더구루"
+        }
+      ]
+    }
+  },
+  "portfolio": {
+    "kr": [
+      {
+        "name": "비츠로셀",
+        "ticker": "082920",
+        "market": "kosdaq",
+        "shares": 572,
+        "avg_price": 34950,
+        "dart_code": null,
+        "tags": [
+          "4월매도예정",
+          "지인추천"
+        ],
+        "conviction": "low"
+      },
+      {
+        "name": "그레이트리치과기유한공사",
+        "ticker": "900290",
+        "market": "kosdaq",
+        "shares": 670,
+        "avg_price": 6468,
+        "dart_code": null,
+        "tags": [
+          "텔레그램"
+        ],
+        "conviction": "low"
+      }
+    ],
+    "us": [
+      {
+        "name": "Palantir",
+        "ticker": "PLTR",
+        "shares": 42.766171,
+        "avg_price_usd": 87.12,
+        "tags": [
+          "확신",
+          "온톨로지",
+          "닥터나우경험"
+        ],
+        "conviction": "high"
+      },
+      {
+        "name": "Hims & Hers",
+        "ticker": "HIMS",
+        "shares": 42,
+        "avg_price_usd": 46.61,
+        "tags": [
+          "확신",
+          "닥터나우피어"
+        ],
+        "conviction": "high"
+      }
+    ],
+    "crypto": [
+      {
+        "name": "도지코인",
+        "ticker": "DOGE",
+        "amount": 6899.18619436,
+        "avg_price_krw": 543.6
+      },
+      {
+        "name": "스텔라루멘",
+        "ticker": "XLM",
+        "amount": 2581.4518787,
+        "avg_price_krw": 606.8
+      },
+      {
+        "name": "스택스",
+        "ticker": "STX",
+        "amount": 1015.52921644,
+        "avg_price_krw": 3292.7
+      },
+      {
+        "name": "이더리움클래식",
+        "ticker": "ETC",
+        "amount": 21.38210586,
+        "avg_price_krw": 52140
+      },
+      {
+        "name": "크레딧코인",
+        "ticker": "CTC",
+        "amount": 926.43591074,
+        "avg_price_krw": 1927
+      },
+      {
+        "name": "피스네트워크",
+        "ticker": "PYTH",
+        "amount": 371.04639175,
+        "avg_price_krw": 1358
+      }
+    ]
+  },
+  "updated_at": "2026-04-05T03:43:18.446699"
+}

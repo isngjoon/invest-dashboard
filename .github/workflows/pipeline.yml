@@ -1,0 +1,72 @@
+name: Investment Dashboard Pipeline
+
+on:
+  schedule:
+    # 30분마다 데이터 수집 + 알림 (data_only = AI 비용 절약)
+    - cron: '*/30 * * * *'
+    # 매일 KST 07:00 (UTC 22:00 전날) 풀 분석 + 모닝 브리핑
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Pipeline mode'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - data_only
+          - briefing
+
+permissions:
+  contents: write
+
+jobs:
+  collect-and-analyze:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Determine mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "mode=${{ inputs.mode }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" == "0 22 * * *" ]; then
+            echo "mode=briefing" >> $GITHUB_OUTPUT
+          else
+            echo "mode=data_only" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run pipeline
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATA_DIR: data
+        working-directory: scripts
+        run: python main.py ${{ steps.mode.outputs.mode }}
+
+      - name: Copy data to frontend
+        run: |
+          cp data/dashboard.json frontend/public/data.json 2>/dev/null || true
+          cp data/briefing.json frontend/public/briefing.json 2>/dev/null || true
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ frontend/public/
+          git diff --staged --quiet || git commit -m "📊 Update $(date -u +%Y-%m-%dT%H:%M)"
+          git push
