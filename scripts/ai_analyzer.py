@@ -101,6 +101,28 @@ def analyze_disclosures(disclosures: list[dict], max_items: int = 5) -> list[dic
         content += f"공시: {d.get('title', '')}\n"
         content += f"일자: {d.get('date', '')}"
 
+        # 대량보유 데이터가 있으면 추가
+        shareholders = d.get("major_shareholders", [])
+        if shareholders:
+            content += "\n\n[대량보유 세부 데이터]"
+            for sh in shareholders[:5]:
+                direction = ""
+                change = sh.get("shares_change", "")
+                if change:
+                    try:
+                        num = int(change.replace(",", ""))
+                        direction = "매수(증가)" if num > 0 else "매도(감소)" if num < 0 else "변동없음"
+                    except ValueError:
+                        pass
+                content += (
+                    f"\n- 보고자: {sh.get('reporter', '?')}"
+                    f" | 보유주식: {sh.get('shares_held', '?')}주"
+                    f" | 증감: {change}주 ({direction})"
+                    f" | 보유비율: {sh.get('ratio_pct', '?')}%"
+                    f" (변동: {sh.get('ratio_change_pct', '?')}%p)"
+                    f" | 사유: {sh.get('reason', '?')}"
+                )
+
         analysis = analyze_item("공시", content)
         analyzed.append({
             **d,

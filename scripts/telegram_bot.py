@@ -78,6 +78,27 @@ def format_disclosure_alert(disclosure: dict) -> str:
         f"📅 {disclosure.get('date', '')}",
     ]
 
+    # 대량보유 세부 데이터가 있으면 표시
+    shareholders = disclosure.get("major_shareholders", [])
+    if shareholders:
+        lines.append("")
+        lines.append("<b>👤 대량보유 변동</b>")
+        for sh in shareholders[:3]:
+            change = sh.get("shares_change", "")
+            direction = ""
+            if change:
+                try:
+                    num = int(str(change).replace(",", ""))
+                    direction = "📈증가" if num > 0 else "📉감소" if num < 0 else ""
+                except ValueError:
+                    pass
+            lines.append(
+                f"  {sh.get('reporter', '?')}: "
+                f"{sh.get('shares_held', '?')}주 "
+                f"({sh.get('ratio_pct', '?')}%) "
+                f"{direction} {change}주"
+            )
+
     if ai:
         lines.append("")
         lines.append(f"<b>🔍 {ai.get('headline', '')}</b>")

@@ -113,6 +113,49 @@ def fetch_financials(corp_code: str, year: str, report_code: str = "11011") -> d
     return financials
 
 
+def fetch_major_shareholders(corp_code: str) -> list:
+    """대량보유 상황보고 데이터 조회 - 누가 얼마나 매수/매도했는지"""
+    url = f"{BASE_URL}/majorstock.json"
+    params = {
+        "crtfc_key": DART_API_KEY,
+        "corp_code": corp_code,
+    }
+    r = requests.get(url, params=params)
+    if r.status_code != 200:
+        return []
+
+    data = r.json()
+    if data.get("status") != "000":
+        return []
+
+    results = []
+    for item in data.get("list", []):
+        results.append({
+            "reporter": item.get("repror", ""),
+            "shares_held": item.get("stkqy", ""),
+            "shares_change": item.get("stkqy_irds", ""),
+            "ratio_pct": item.get("stkrt", ""),
+            "ratio_change_pct": item.get("stkrt_irds", ""),
+            "reason": item.get("report_resn", ""),
+            "date": item.get("rcept_dt", ""),
+        })
+
+    return results
+
+
+def enrich_disclosure_with_details(disclosure: dict, corp_code: str) -> dict:
+    """공시 유형에 따라 세부 데이터를 추가"""
+    title = disclosure.get("title", "")
+
+    # 대량보유상황보고서인 경우 대량보유 데이터 추가
+    if "대량보유" in title:
+        shareholders = fetch_major_shareholders(corp_code)
+        if shareholders:
+            disclosure["major_shareholders"] = shareholders
+
+    return disclosure
+
+
 def collect_all_disclosures(tickers: list[str], days: int = 7) -> list[dict]:
     """전체 관심종목 공시 수집"""
     all_disclosures = []
@@ -124,6 +167,7 @@ def collect_all_disclosures(tickers: list[str], days: int = 7) -> list[dict]:
         disclosures = fetch_disclosures(corp_code, days)
         for d in disclosures:
             d["ticker"] = ticker
+            enrich_disclosure_with_details(d, corp_code)
         all_disclosures.extend(disclosures)
 
     all_disclosures.sort(key=lambda x: x["date"], reverse=True)
